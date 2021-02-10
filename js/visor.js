@@ -39,8 +39,8 @@ function onClick(e) {
 	//document.getElementById('latitude').value = this.getLatLng().lat;
 	//document.getElementById('longitude').value = this.getLatLng().lng;
 	//SACA LETRERITO:
-	alert(this.getLatLng());
-	console.log(this.getLatLng());
-	//alert('LATITUD: ' + this.getLatLng().lat + '  LONGITUD: ' + this.getLatLng().lng);
-	//console.log('LATITUD: ' + this.getLatLng().lat + '  LONGITUD: ' + this.getLatLng().lng);
-	}	
+	//alert(this.getLatLng());
+	//console.log(this.getLatLng());
+	alert('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
+	console.log('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
+	}
