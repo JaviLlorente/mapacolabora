@@ -26,9 +26,5 @@ selectorCapas.addTo(mapa);
 //METE EL CONTROL DE PANTALLA COMPLETA-NO VA Y PARA TODO LO SIGUIENTE
 //L.control.Fullscreen().addTo(mapa);
 
-//METE EL MARKER DRAGABLE
-	L.marker([41.0831, -3.9760], {	
-		draggable: true
-	}).addTo(mapa).on('dragend', onClick);
 
 
