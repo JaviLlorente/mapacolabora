@@ -27,8 +27,19 @@ selectorCapas.addTo(mapa);
 //L.control.Fullscreen().addTo(mapa);
 
 //METE EL MARKER DRAGABLE
-	L.marker([41.0831, -3.9760], {	
-		draggable: true
+L.marker([41.0831, -3.9760], {	
+	draggable: true
 	}).addTo(mapa).on('dragend', onClick);
 
-	
+//MUEVE EL MAPA CUANDO SE TERMINA DE DRAGGEAR EL MARKER
+function onClick(e) {	
+	mapa.panTo(this.getLatLng())
+		
+	//document.getElementById('latitude').value = this.getLatLng().lat;
+	//document.getElementById('longitude').value = this.getLatLng().lng;
+	//SACA LETRERITO:
+	alert(this.getLatLng());
+	console.log(this.getLatLng());
+	//alert('LATITUD: ' + this.getLatLng().lat + '  LONGITUD: ' + this.getLatLng().lng);
+	//console.log('LATITUD: ' + this.getLatLng().lat + '  LONGITUD: ' + this.getLatLng().lng);
+	}	
