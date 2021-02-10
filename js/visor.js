@@ -39,8 +39,19 @@ function onClick(e) {
 	//document.getElementById('latitude').value = this.getLatLng().lat;
 	//document.getElementById('longitude').value = this.getLatLng().lng;
 	//SACA LETRERITO:
-	alert(this.getLatLng());
-	console.log(this.getLatLng());
+	//alert(this.getLatLng());
+	//console.log(this.getLatLng());
 	//alert('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
 	//console.log('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
+	
+/*Funcion de Capturar, Almacenar datos*/
+      
+        /*Captura de datos escrito en los inputs*/        
+        var latud = this.getLatLng().lat;
+        var lonud = this.getLatLng().lng;
+        /*Guardando los datos en el LocalStorage*/
+        localStorage.setItem("Latitudes", latud);
+        localStorage.setItem("Longitudes", lonud);   
+          	
+	
 	}
