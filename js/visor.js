@@ -30,7 +30,7 @@ selectorCapas.addTo(mapa);
 
 //METE EL MARKER DRAGABLE
 L.marker([41.0831, -3.9760], {	
-	draggable: true
+	draggable: true, autopan: true
 	}).addTo(mapa).on('dragend', onClick);
 
 //MUEVE EL MAPA CUANDO SE TERMINA DE DRAGGEAR EL MARKER
