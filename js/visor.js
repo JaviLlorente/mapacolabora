@@ -31,14 +31,4 @@ selectorCapas.addTo(mapa);
 		draggable: true
 	}).addTo(mapa).on('dragend', onClick);
 
-function onClick(e) {	
-	    mapa.panTo(this.getLatLng())
-		
-		//document.getElementById('latitude').value = this.getLatLng().lat;
-		//document.getElementById('longitude').value = this.getLatLng().lng;
-		//SACA LETRERITO:
-		//alert(this.getLatLng());
-		console.log(this.getLatLng());
-		//alert('LATITUD: ' + this.getLatLng().lat + '  LONGITUD: ' + this.getLatLng().lng);
-		//console.log('LATITUD: ' + this.getLatLng().lat + '  LONGITUD: ' + this.getLatLng().lng);
-		}	
+
