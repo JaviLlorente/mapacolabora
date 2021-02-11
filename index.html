@@ -4,13 +4,32 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">  
-  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		
   <title>Mapa básico con Leaflet</title>  
   <link rel="stylesheet" href="css/leaflet.css"/>
   <script src="js/leaflet.js"></script>
+  
+  <!--DEL MAPA NUEVO LEAFLET-->
+  	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<!--PARA EL CONTROL DE PANTALLA COMPLETA:-->
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+  
+  
+  <!--FIN ENCABEZADO DEL MAPA NUEVO LEAFLET-->
+  
+  
 </head>
 <body>
+    <form id="coordenadillas">
+		<label style="font-size:0.8rem;color:#999999;margin-left:3rem"> Lat: </label><input type="text" name="latit" id="latit" value="41.0831" style="font-size:0.7rem;width:5.5rem;background-color:lightgrey" disabled="disabled" />
+		<label style="font-size:0.8rem;color:#999999;margin-left:1.8rem"> Long: </label><input  type="text" name="longit" id="longit" value="-3.9760" style="font-size:0.7rem;width:5.7rem;background-color:lightgrey" disabled="disabled" /> 
+    </form>
 	<div id="mi-mapa"></div>
 	<script src="js/visor.js"></script>
+	
 </body>
 </html>
