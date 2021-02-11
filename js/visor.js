@@ -24,9 +24,8 @@ var capasBase = {
 var selectorCapas = new L.control.layers(capasBase);
 selectorCapas.addTo(mapa);
 
-
-//METE EL CONTROL DE PANTALLA COMPLETA-NO VA Y PARA TODO LO SIGUIENTE
-//L.control.Fullscreen().addTo(mapa);
+//METE EL CONTROL DE PANTALLA COMPLETA (no va en IE)
+mapa.addControl(new L.Control.Fullscreen());
 
 //METE EL MARKER DRAGABLE
 L.marker([41.0831, -3.9760], {	
@@ -36,22 +35,15 @@ L.marker([41.0831, -3.9760], {
 //MUEVE EL MAPA CUANDO SE TERMINA DE DRAGGEAR EL MARKER
 function onClick(e) {	
 	mapa.panTo(this.getLatLng());		
-	//document.getElementById('latitude').value = this.getLatLng().lat;
-	//document.getElementById('longitude').value = this.getLatLng().lng;
+	document.getElementById('latit').value = this.getLatLng().lat;
+	document.getElementById('longit').value = this.getLatLng().lng;
 	//SACA LETRERITO:
 	//alert(this.getLatLng());
 	//console.log(this.getLatLng());
 	//alert('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
-	//console.log('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
+	//console.log('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);        	
+	}		
 	
-/*Funcion de Capturar, Almacenar datos*/
-      
-        /*Captura de datos escrito en los inputs*/        
-        var latud = this.getLatLng().lat;
-        var lonud = this.getLatLng().lng;
-        /*Guardando los datos en el LocalStorage*/
-        localStorage.setItem("Latitudes", latud);
-        localStorage.setItem("Longitudes", lonud);   
-          	
+
+ 
 	
-	}
