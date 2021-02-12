@@ -47,17 +47,14 @@ function onClick(e) {
 
 	//var frame = marker.bindPopup('  ' + this.getLatLng().lat + ',  ' + this.getLatLng().lng ).openPopup();
  
-	sendMessage ()
-}
- 
- function sendMessage(){
+	
 
 	var lata = document.getElementById('latit').value;
 	var lona = document.getElementById('longit').value;
 
     // Store data
 	localStorage.setItem("latoya", lata);
-    localStorage.setItem("longinus", lona);
+    	localStorage.setItem("longinus", lona);
 
 	}
 
