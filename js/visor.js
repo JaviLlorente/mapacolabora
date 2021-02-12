@@ -28,12 +28,14 @@ selectorCapas.addTo(mapa);
 mapa.addControl(new L.Control.Fullscreen());
 
 //METE EL MARKER DRAGABLE
-L.marker([41.0831, -3.9760], {	
+var marker = L.marker([41.0831, -3.9760], {	
 	draggable: true, autopan: true
 	}).addTo(mapa).on('dragend', onClick);
-
+	
+	
 //MUEVE EL MAPA CUANDO SE TERMINA DE DRAGGEAR EL MARKER
 function onClick(e) {	
+
 	mapa.panTo(this.getLatLng());		
 	document.getElementById('latit').value = this.getLatLng().lat;
 	document.getElementById('longit').value = this.getLatLng().lng;
@@ -41,9 +43,22 @@ function onClick(e) {
 	//alert(this.getLatLng());
 	//console.log(this.getLatLng());
 	//alert('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);
-	//console.log('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);        	
-	}		
-	
+	//console.log('latitude: ' + this.getLatLng().lat + '  longitude: ' + this.getLatLng().lng);       
 
+	//var frame = marker.bindPopup('  ' + this.getLatLng().lat + ',  ' + this.getLatLng().lng ).openPopup();
  
-	
+	sendMessage ()
+}
+ 
+ function sendMessage(){
+
+	var lata = document.getElementById('latit').value;
+	var lona = document.getElementById('longit').value;
+
+    // Store data
+	localStorage.setItem("latoya", lata);
+    localStorage.setItem("longinus", lona);
+
+	}
+
+  
